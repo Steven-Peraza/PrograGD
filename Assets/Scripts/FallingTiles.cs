@@ -9,9 +9,11 @@ public class FallingTiles : MonoBehaviour
     private List<int> possible = new List<int>();
     public float firstTimer = 10.0f;
     public float nextTimer = 5.0f;
-    private int tileToFall, tilesRemaining, randomTile;
+    private int tileToFall, randomTile;
+    public static int tilesRemaining;
     private bool moving;
 
+    public static bool gameOuva = false;
     private bool playAura = false;
     private ParticleSystem particleObject;
 
@@ -35,6 +37,9 @@ public class FallingTiles : MonoBehaviour
     }
 
     void Update() {
+        if(gameOuva) {
+            GG();
+        }
         if (moving){
             platforms[tileToFall].transform.position += Vector3.down * 3 * Time.deltaTime;
         }
