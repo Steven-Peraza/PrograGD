@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Platform
   - PS
+  - NPC
+  - cameraGG
   layers:
   - Default
   - TransparentFX

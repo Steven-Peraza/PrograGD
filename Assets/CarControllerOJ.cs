@@ -7,7 +7,12 @@ public class CarControllerOJ : MonoBehaviour
     public List<AxleInfo> axleInfos; // the information about each individual axle
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
     public float maxSteeringAngle; // maximum steer angle the wheel can have
-        
+
+    //private ParticleSystem PS;
+
+    /* private void Start() {
+        PS = GetComponent<ParticleSystem>();
+    }*/
     public void FixedUpdate()
     {
 
@@ -15,6 +20,10 @@ public class CarControllerOJ : MonoBehaviour
             transform.position = respawn.reachedPoint;
             transform.rotation = Quaternion.Euler(respawn.reachedPointRotation);
         }
+
+        /* if (Input.GetKey(KeyCode.S)){
+            PS.Play();
+        }*/
 
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
