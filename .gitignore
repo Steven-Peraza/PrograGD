@@ -47,6 +47,9 @@ $RECYCLE.BIN/
 # Visual Studio cache directory
 .vs/
 
+# Visual Studio code cache directory
+.vscode/
+
 # Gradle cache directory
 .gradle/
 

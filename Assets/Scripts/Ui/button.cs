@@ -21,9 +21,11 @@ public class button : MonoBehaviour
             anim.SetBool("hover", true);
             if(Input.GetAxis("Submit") == 1){
                 anim.SetBool("press", true);
+                
             }
-            //else if (si la animacion de presionar esta encendida)
-            //ejecutar la accion de abrir ese otro escenario
+            else if(anim.GetBool("press")){
+                
+            }
         }else{
             anim.SetBool("hover", false);
         }

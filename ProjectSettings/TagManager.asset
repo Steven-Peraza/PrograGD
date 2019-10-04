@@ -8,6 +8,7 @@ TagManager:
   - PS
   - NPC
   - cameraGG
+  - Menu
   layers:
   - Default
   - TransparentFX
